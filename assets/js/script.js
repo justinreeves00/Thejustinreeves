@@ -1,0 +1,1 @@
+// Add interactivity here (e.g., window dragging, carousels)

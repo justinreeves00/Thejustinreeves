@@ -1,0 +1,62 @@
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: url('../images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1rem;
+    color: white;
+    margin: 1rem;
+}
+
+.widget {
+    width: 300px;
+}
+
+.header-widget {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.sticker {
+    height: 48px;
+    border-radius: 50%;
+}
+
+.links a {
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+}

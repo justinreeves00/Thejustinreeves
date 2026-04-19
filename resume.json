@@ -1,0 +1,184 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "canonical": "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json",
+    "theme": "kendall"
+  },
+  "basics": {
+    "name": "Justin Reeves",
+    "label": "Deployment systems engineer, automation builder, and customer-facing technical partner",
+    "email": "Justin_Reeves@me.com",
+    "phone": "601-955-4051",
+    "url": "https://thejustinreeves.com",
+    "summary": "I operate at the intersection of customer needs and engineering, building systems that reduce friction, improve adoption, and translate real-world deployment challenges into practical workflows. I care about shipping useful tools, not just interesting ideas.",
+    "location": {
+      "city": "Marietta",
+      "region": "GA",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "justinreeves00",
+        "url": "https://www.linkedin.com/in/justinreeves00/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Apple Inc.",
+      "position": "Deployment Systems Engineer",
+      "startDate": "2023-01-01",
+      "summary": "Centralized workflow platforms, AI-powered customer intelligence, and automation across teams.",
+      "highlights": [
+        "Designed and built Cornerstone, a centralized workflow platform integrating Calendly, internal systems, and communication tools into a single system for managing customer engagements.",
+        "Leading development of an AI-powered customer intelligence system that aggregates engagement data, enables chat-based querying, and automates follow-ups using meeting transcripts.",
+        "Supported customers across K-12, higher education, and state/local government, guiding large-scale Apple deployments and best practices.",
+        "Built automation tools with Python, APIs, and Shortcuts that were adopted across multiple teams to reduce manual workflow overhead."
+      ]
+    },
+    {
+      "name": "Apple Inc.",
+      "position": "K-12 Systems Engineer",
+      "startDate": "2020-01-01",
+      "endDate": "2023-01-01",
+      "summary": "Customer-facing technical support for school districts across Georgia.",
+      "highlights": [
+        "Supported school districts across Georgia as a trusted technical advisor for Apple deployments.",
+        "Partnered with sales teams to remove technical blockers and support customer acquisition strategies.",
+        "Delivered technical workshops and deep dives on MDM, macOS deployment, and Apple School Manager.",
+        "Built automation tools to improve internal workflows and customer engagement processes."
+      ]
+    },
+    {
+      "name": "Manhattan Associates",
+      "position": "Senior Systems Engineer",
+      "startDate": "2020-01-01",
+      "endDate": "2020-12-31",
+      "summary": "Systems and onboarding improvements for Apple environments.",
+      "highlights": [
+        "Rebuilt the macOS enrollment experience using Octory, improving transparency and user experience during device setup.",
+        "Designed a zero-touch deployment workflow integrating Jamf, Okta, and onboarding tools.",
+        "Trained and mentored engineers on Apple device management and Jamf best practices.",
+        "Provided high-touch support for executives and critical systems."
+      ]
+    },
+    {
+      "name": "Equifax (Tata Consultancy Services)",
+      "position": "Jamf & Apple Systems Engineer",
+      "startDate": "2019-01-01",
+      "endDate": "2020-01-01",
+      "summary": "Enterprise deployment architecture and automation.",
+      "highlights": [
+        "Built global Jamf Pro Cloud deployment architecture, migrating from on-prem infrastructure to a more scalable model.",
+        "Designed standardized enrollment workflows and configuration profiles for global device management.",
+        "Implemented Apple content caching strategy across regions to improve performance and reduce bandwidth usage.",
+        "Developed a Python-based macOS LAPS solution for secure admin credential management."
+      ]
+    },
+    {
+      "name": "Clinton Public School District",
+      "position": "MDM Systems Administrator",
+      "startDate": "2013-01-01",
+      "endDate": "2019-01-01",
+      "summary": "End-to-end Apple device management and district operations.",
+      "highlights": [
+        "Owned end-to-end Apple device management strategy for the district.",
+        "Built automation workflows using scripting and APIs to improve IT efficiency.",
+        "Developed internal tools and dashboards to support deployment and operations.",
+        "Managed vendor relationships, inventory, and lifecycle processes."
+      ]
+    },
+    {
+      "name": "Apple Inc.",
+      "position": "Genius",
+      "startDate": "2010-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Advanced troubleshooting and repair in the Apple product ecosystem.",
+      "highlights": [
+        "Delivered advanced troubleshooting and repair across the Apple product ecosystem.",
+        "Trained customers and internal team members on Apple technologies.",
+        "Recognized for leadership and technical expertise."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI Customer Engagement System",
+      "description": "Aggregates customer data, meeting transcripts, and engagement history, then helps teams automate follow-up work.",
+      "highlights": [
+        "Customer context and follow-up automation",
+        "Chat-based access to engagement history"
+      ]
+    },
+    {
+      "name": "macOS LAPS Tool",
+      "description": "Python-based tool for securely managing admin credentials in enterprise Apple environments.",
+      "highlights": [
+        "Secure admin credential management",
+        "Enterprise Apple workflow integration"
+      ]
+    },
+    {
+      "name": "Home Assistant + AI Automations",
+      "description": "Smart home workflows that combine local systems with AI-driven triggers and integrations.",
+      "highlights": [
+        "Local + AI automation",
+        "Adaptive workflow design"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Core",
+      "keywords": [
+        "Deployment and workflow automation",
+        "Customer-facing engineering",
+        "Systems integration",
+        "Technical program execution"
+      ]
+    },
+    {
+      "name": "Technical",
+      "keywords": [
+        "Jamf Pro",
+        "Mosyle",
+        "MDM frameworks",
+        "Apple School Manager",
+        "Apple Business Manager",
+        "Python",
+        "Bash",
+        "REST APIs",
+        "Okta",
+        "Federation",
+        "macOS security"
+      ]
+    },
+    {
+      "name": "Emerging",
+      "keywords": [
+        "AI-powered workflow automation",
+        "Local LLM tooling and integrations",
+        "Agent-oriented thinking"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Hinds Community College",
+      "area": "Computer Networking Support Technologies",
+      "studyType": "Associate of Applied Science"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Jamf Certified Administrator",
+      "issuer": "Jamf"
+    },
+    {
+      "name": "Apple Certified Mac Technician",
+      "issuer": "Apple"
+    }
+  ]
+}

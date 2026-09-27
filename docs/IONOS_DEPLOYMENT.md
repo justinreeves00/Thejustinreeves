@@ -13,4 +13,4 @@ Required GitHub Actions secrets:
 | `IONOS_KNOWN_HOSTS` | Pinned SSH host key line for the IONOS host |
 | `IONOS_SITE_PATH` | Absolute remote directory for the public site root |
 
-The deploy intentionally excludes `scan/` and `up/` from deletion or upload because those folders are managed by ScanApp and the review/upload service.
+The deploy intentionally never uploads into `scan/` or `up/` because those folders are managed by ScanApp and the review/upload service. It uploads and overwrites the current site files, but it does not delete remote folders.

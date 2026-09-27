@@ -51,26 +51,53 @@ jobs:
       - name: Deploy site files
         run: |
           set -euo pipefail
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq lftp
+          python3 - <<'PY' > deploy.sftp
+          import os
+          from pathlib import Path
 
-          lftp -e "\
-            set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/ionos_deploy_key -p $IONOS_PORT -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts'; \
-            mkdir -p '$IONOS_SITE_PATH'; \
-            mirror --reverse --delete --verbose \
-              --exclude-glob .git/ \
-              --exclude-glob .github/ \
-              --exclude-glob .gitignore \
-              --exclude-glob .DS_Store \
-              --exclude-glob README.md \
-              --exclude-glob docs/ \
-              --exclude-glob docs/** \
-              --exclude-glob scan/ \
-              --exclude-glob scan/** \
-              --exclude-glob up/ \
-              --exclude-glob up/** \
-              ./ '$IONOS_SITE_PATH'; \
-            bye" "sftp://$IONOS_USER@$IONOS_HOST"
+          remote_root = os.environ["IONOS_SITE_PATH"].rstrip("/")
+          excluded_dirs = {".git", ".github", "docs", "scan", "up"}
+          excluded_files = {".DS_Store", ".gitignore", "README.md"}
+
+          def quote(value: str) -> str:
+              return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+          files = []
+          dirs = {remote_root}
+          for path in Path(".").rglob("*"):
+              rel = path.as_posix()
+              parts = set(path.parts)
+              if parts & excluded_dirs:
+                  continue
+              if path.name in excluded_files:
+                  continue
+              if path.is_dir():
+                  dirs.add(f"{remote_root}/{rel}")
+              elif path.is_file():
+                  files.append((rel, f"{remote_root}/{rel}"))
+                  for parent in path.parent.parents:
+                      if parent.as_posix() == ".":
+                          break
+                      dirs.add(f"{remote_root}/{parent.as_posix()}")
+                  if path.parent.as_posix() != ".":
+                      dirs.add(f"{remote_root}/{path.parent.as_posix()}")
+
+          for directory in sorted(dirs):
+              print(f"-mkdir {quote(directory)}")
+          for local, remote in sorted(files):
+              print(f"put {quote(local)} {quote(remote)}")
+          print("bye")
+          PY
+
+          sftp \
+            -i "$HOME/.ssh/ionos_deploy_key" \
+            -o BatchMode=yes \
+            -o IdentitiesOnly=yes \
+            -o StrictHostKeyChecking=yes \
+            -o UserKnownHostsFile="$HOME/.ssh/known_hosts" \
+            -P "$IONOS_PORT" \
+            -b deploy.sftp \
+            "$IONOS_USER@$IONOS_HOST"
 
       - name: Verify public site
         run: |

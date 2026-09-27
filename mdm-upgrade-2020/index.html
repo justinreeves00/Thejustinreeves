@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="theme-color" content="#eef3f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MDM Upgrade Case Study | Justin Reeves</title>
+<meta name="description" content="How Justin Reeves rebuilt Mac management with zero-touch enrollment, Jamf Pro, Jamf Connect, Okta, and Octory.">
+<link rel="canonical" href="https://thejustinreeves.com/mdm-upgrade-2020/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Justin Reeves">
+<meta property="og:url" content="https://thejustinreeves.com/mdm-upgrade-2020/">
+<meta property="og:title" content="MDM Upgrade Case Study | Justin Reeves">
+<meta property="og:description" content="How Justin Reeves rebuilt Mac management with zero-touch enrollment, Jamf Pro, Jamf Connect, Okta, and Octory.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thejustinreeves">
+<meta name="twitter:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<meta property="og:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<link rel="icon" href="../assets/sticker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>(function(){try{var m=localStorage.getItem("jr-mode");if(m)document.documentElement.setAttribute("data-mode",m)}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/style.css?v=9">
+</head><body>
+<header class="nav"><div class="wrap"><a class="home" href="../"><img src="../assets/sticker.png" alt="">Justin Reeves</a><div class="nav-right"><ul><li class="hide-sm"><a href="../#about">About</a></li><li><a href="../#work" aria-current="page">Projects</a></li><li><a href="../resume/">Resume</a></li><li><a href="../sticker/">Sticker Story</a></li></ul><button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div></div></header>
+<main class="wrap"><article class="cs">
+  <div class="cs-head">
+    <p class="meta">Manhattan Associates · 2020</p>
+    <h1>MDM Upgrade</h1>
+    <p class="lead">A full rebuild of the company’s Mac management environment, from the first boot to the login screen.</p>
+    <div class="chips"><span>Jamf Pro</span><span>Jamf Connect</span><span>Okta + MFA</span><span>Octory</span><span>Xcode</span></div>
+  </div>
+  <p>At Manhattan Associates I built an entirely new MDM workflow for the company. I brought Octory, Jamf Pro, Jamf Connect, and other tools together into one streamlined environment for both IT and employees.</p>
+
+  <h2>Zero-touch enrollment</h2>
+  <p>I designed and documented a zero-touch workflow. Employees sign in with Okta during macOS Setup Assistant, a local account is created from their Okta credentials, FileVault is turned on, and they can watch what’s installing on their Mac in real time.</p>
+  <p>I used this documentation to train other technicians on how enrollment works and how to troubleshoot it when a step fails.</p>
+  <figure class="narrow"><img src="../assets/projects/Enrollment_Workflow-1.png" alt="Diagram of the updated enrollment workflow"><figcaption>Updated enrollment workflow</figcaption></figure>
+
+  <h2>Required software, one policy each</h2>
+  <p>To cut down on policy changes every time required software updated, I built a set of base policies in Jamf Pro. Every required app got one base policy, and all Self Service, reinstall, force install, and update policies call it with a custom command.</p>
+  <p>When an update ships, you change one base policy and everything else picks it up.</p>
+  <figure class="narrow"><img src="../assets/projects/Policy-Workflow.png" alt="Diagram of the required software policy workflow"><figcaption>Required software workflow</figcaption></figure>
+
+  <h2>A better first login</h2>
+  <p>The company was using SplashBuddy to tell employees what was installing at first login. I replaced it with Octory, customized it in Xcode, and published it as an in-house app through Jamf Pro. It greets each person by name, gives specific instructions, and shows what’s installing and whether anything failed.</p>
+  <figure><img src="../assets/projects/Old_New_Enrollment-Process.png" alt="SplashBuddy on the left, Octory on the right"><figcaption>Before and after: SplashBuddy (left), Octory (right)</figcaption></figure>
+
+  <h2>Login screen with Okta and MFA</h2>
+  <p>I upgraded the Jamf Connect login screen and connected it to Okta with MFA. I worked with the marketing team on images and logos to match the brand, which also built relationships across departments and made sign-in simpler for everyone.</p>
+  <figure><img src="../assets/projects/old_new_login_screen.png" alt="Old and new Jamf Connect login screens"><figcaption>Jamf Connect login screen, authenticated through Okta</figcaption></figure>
+  <div class="cs-next">
+    <a class="btn ghost" href="../#work">All projects</a>
+    <a class="next" href="../jamf-api-site-2019/"><span>Next project</span>Jamf API Workspace →</a>
+  </div>
+</article></main>
+<footer class="foot"><div class="wrap"><span>© <span id="y"></span> Justin Reeves</span><span><a href="mailto:Justin_Reeves@me.com">Justin_Reeves@me.com</a></span></div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".mode-toggle");if(!b)return;function cur(){return r.getAttribute("data-mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-mode",n);try{localStorage.setItem("jr-mode",n)}catch(e){}var m=document.querySelectorAll('meta[name="theme-color"]');m.forEach(function(x){x.setAttribute("content",n==="dark"?"#0a0a0b":"#eef3f8");x.removeAttribute("media")})})})();</script>
+</body></html>

@@ -9,9 +9,8 @@
     "name": "Justin Reeves",
     "label": "Deployment systems engineer, automation builder, and customer-facing technical partner",
     "email": "Justin_Reeves@me.com",
-    "phone": "601-955-4051",
     "url": "https://thejustinreeves.com",
-    "summary": "I operate at the intersection of customer needs and engineering, building systems that reduce friction, improve adoption, and translate real-world deployment challenges into practical workflows. I care about shipping useful tools, not just interesting ideas.",
+    "summary": "Customer-facing engineer who builds what the field needs. I guide schools and organizations through large Apple deployments, then turn what I learn on those calls into working tools, from AI assistants grounded in real customer data to secure integrations that connect AI to the systems teams already use.",
     "location": {
       "city": "Marietta",
       "region": "GA",
@@ -20,8 +19,11 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "justinreeves00",
-        "url": "https://www.linkedin.com/in/justinreeves00/"
+        "url": "https://www.linkedin.com/in/justincreeves/"
+      },
+      {
+        "network": "GitHub",
+        "url": "https://github.com/justinreeves00"
       }
     ]
   },
@@ -30,18 +32,19 @@
       "name": "Apple Inc.",
       "position": "Deployment Systems Engineer",
       "startDate": "2023-01-01",
-      "summary": "Centralized workflow platforms, AI-powered customer intelligence, and automation across teams.",
+      "summary": "Deployment strategy for education and public sector customers, plus the internal tools that support it.",
       "highlights": [
-        "Designed and built Cornerstone, a centralized workflow platform integrating Calendly, internal systems, and communication tools into a single system for managing customer engagements.",
-        "Leading development of an AI-powered customer intelligence system that aggregates engagement data, enables chat-based querying, and automates follow-ups using meeting transcripts.",
-        "Supported customers across K-12, higher education, and state/local government, guiding large-scale Apple deployments and best practices.",
-        "Built automation tools with Python, APIs, and Shortcuts that were adopted across multiple teams to reduce manual workflow overhead."
+        "Guide K-12, higher education, and state and local government customers through large-scale Apple deployments, covering MDM, identity and single sign-on, and zero-touch enrollment.",
+        "Consistently deploy customers faster than the team average while carrying a full caseload.",
+        "Designed and built an AI-powered browser extension that centralizes case data, email templates, and scheduling. Its AI assistant is grounded in each customer's full history, the deployment process, and the engineer's role. Used daily across the deployment team.",
+        "Designed and built Cornerstone, a custom FileMaker Pro platform that connects Calendly, internal systems, and communication tools into a single pane of glass for managing customer engagements.",
+        "Engineered a CRM MCP server that gives AI assistants a secure, permissioned connection to customer records, which wasn't previously possible. Also built automation tools with Python, APIs, and Shortcuts adopted across multiple teams."
       ]
     },
     {
       "name": "Apple Inc.",
       "position": "K-12 Systems Engineer",
-      "startDate": "2020-01-01",
+      "startDate": "2020-06",
       "endDate": "2023-01-01",
       "summary": "Customer-facing technical support for school districts across Georgia.",
       "highlights": [
@@ -54,8 +57,8 @@
     {
       "name": "Manhattan Associates",
       "position": "Senior Systems Engineer",
-      "startDate": "2020-01-01",
-      "endDate": "2020-12-31",
+      "startDate": "2020-01",
+      "endDate": "2020-05",
       "summary": "Systems and onboarding improvements for Apple environments.",
       "highlights": [
         "Rebuilt the macOS enrollment experience using Octory, improving transparency and user experience during device setup.",
@@ -80,7 +83,7 @@
     {
       "name": "Clinton Public School District",
       "position": "MDM Systems Administrator",
-      "startDate": "2013-01-01",
+      "startDate": "2013-06",
       "endDate": "2019-01-01",
       "summary": "End-to-end Apple device management and district operations.",
       "highlights": [
@@ -94,7 +97,7 @@
       "name": "Apple Inc.",
       "position": "Genius",
       "startDate": "2010-01-01",
-      "endDate": "2013-01-01",
+      "endDate": "2013-06",
       "summary": "Advanced troubleshooting and repair in the Apple product ecosystem.",
       "highlights": [
         "Delivered advanced troubleshooting and repair across the Apple product ecosystem.",
@@ -105,8 +108,13 @@
   ],
   "projects": [
     {
-      "name": "AI Customer Engagement System",
-      "description": "Aggregates customer data, meeting transcripts, and engagement history, then helps teams automate follow-up work.",
+      "name": "AI-Powered Browser Extension",
+      "description": "Case data, templates, scheduling, and an AI assistant that knows each customer's history, the deployment process, and the user's role.",
+      "highlights": []
+    },
+    {
+      "name": "Cornerstone",
+      "description": "Custom FileMaker Pro platform that unifies scheduling, internal systems, and communications into one view of every customer engagement.",
       "highlights": [
         "Customer context and follow-up automation",
         "Chat-based access to engagement history"
@@ -131,36 +139,67 @@
   ],
   "skills": [
     {
-      "name": "Core",
+      "name": "Forward deployment",
       "keywords": [
-        "Deployment and workflow automation",
-        "Customer-facing engineering",
-        "Systems integration",
-        "Technical program execution"
+        "Technical discovery and scoping",
+        "Rapid prototyping",
+        "Turning field feedback into tools",
+        "Customer workshops and training",
+        "IT leadership stakeholder management",
+        "Technical documentation"
       ]
     },
     {
-      "name": "Technical",
+      "name": "Device management",
       "keywords": [
         "Jamf Pro",
+        "Jamf School",
+        "Microsoft Intune",
         "Mosyle",
-        "MDM frameworks",
         "Apple School Manager",
         "Apple Business Manager",
-        "Python",
-        "Bash",
-        "REST APIs",
-        "Okta",
-        "Federation",
-        "macOS security"
+        "Apple Configurator",
+        "Zero-touch enrollment",
+        "Jamf Connect"
       ]
     },
     {
-      "name": "Emerging",
+      "name": "Identity and security",
       "keywords": [
-        "AI-powered workflow automation",
-        "Local LLM tooling and integrations",
-        "Agent-oriented thinking"
+        "Okta",
+        "Microsoft Entra ID",
+        "Google Workspace LDAP",
+        "SSO and federation",
+        "MFA",
+        "FileVault"
+      ]
+    },
+    {
+      "name": "Engineering",
+      "keywords": [
+        "Python",
+        "Bash",
+        "JavaScript",
+        "TypeScript",
+        "Swift and SwiftUI",
+        "PHP",
+        "FileMaker Pro",
+        "REST APIs",
+        "Browser extensions",
+        "Salesforce APIs and CLI",
+        "Git and GitHub"
+      ]
+    },
+    {
+      "name": "AI engineering",
+      "keywords": [
+        "MCP server development",
+        "Agent skill authoring",
+        "LLM integration",
+        "Tool and function calling",
+        "Prompt engineering",
+        "Multi-agent orchestration",
+        "Workflow automation"
       ]
     }
   ],

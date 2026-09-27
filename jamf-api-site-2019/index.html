@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="theme-color" content="#eef3f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jamf API Workspace Case Study | Justin Reeves</title>
+<meta name="description" content="A locked-down PHP web app by Justin Reeves that let technicians run approved Jamf Pro actions without console access.">
+<link rel="canonical" href="https://thejustinreeves.com/jamf-api-site-2019/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Justin Reeves">
+<meta property="og:url" content="https://thejustinreeves.com/jamf-api-site-2019/">
+<meta property="og:title" content="Jamf API Workspace Case Study | Justin Reeves">
+<meta property="og:description" content="A locked-down PHP web app by Justin Reeves that let technicians run approved Jamf Pro actions without console access.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thejustinreeves">
+<meta name="twitter:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<meta property="og:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<link rel="icon" href="../assets/sticker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>(function(){try{var m=localStorage.getItem("jr-mode");if(m)document.documentElement.setAttribute("data-mode",m)}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/style.css?v=9">
+</head><body>
+<header class="nav"><div class="wrap"><a class="home" href="../"><img src="../assets/sticker.png" alt="">Justin Reeves</a><div class="nav-right"><ul><li class="hide-sm"><a href="../#about">About</a></li><li><a href="../#work" aria-current="page">Projects</a></li><li><a href="../resume/">Resume</a></li><li><a href="../sticker/">Sticker Story</a></li></ul><button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div></div></header>
+<main class="wrap"><article class="cs">
+  <div class="cs-head">
+    <p class="meta">Equifax · 2019</p>
+    <h1>Jamf API Workspace</h1>
+    <p class="lead">A locked-down web app that let technicians run specific Jamf Pro actions without access to the full console.</p>
+    <div class="chips"><span>PHP</span><span>Jamf Pro API</span><span>Session security</span></div>
+  </div>
+  <h2>The problem</h2>
+  <p>At Equifax we had a technician permissions problem. We wanted technicians to handle specific tasks in Jamf Pro without giving them access to the Jamf Pro console itself.</p>
+
+  <h2>What I built</h2>
+  <p>I built a PHP site that could perform only the actions we wanted technicians to have. Here’s how it works:</p>
+  <ol>
+    <li>The technician signs in with admin credentials. The site verifies them before continuing and shows an error if they fail.</li>
+    <li>They enter a computer name.</li>
+    <li>They choose the action they want to run on that computer.</li>
+    <li>An API call finds the computer in Jamf Pro and adds it to the right group so the action runs.</li>
+    <li>The technician is signed out automatically and the session ends, so they sign in again every time.</li>
+  </ol>
+  <div class="gallery" style="margin-top:32px">
+    <figure><img src="../assets/projects/step-1.png" alt="Sign-in screen"><figcaption>1 · Sign in</figcaption></figure>
+    <figure><img src="../assets/projects/step-2.png" alt="Enter computer name and choose action"><figcaption>2 · Choose an action</figcaption></figure>
+    <figure><img src="../assets/projects/step-3.png" alt="Action complete and session ended"><figcaption>3 · Done, signed out</figcaption></figure>
+  </div>
+  <p style="margin-top:18px;font-size:15px;color:var(--ink-soft)">Some details are hidden for company security.</p>
+  <div class="cs-next">
+    <a class="btn ghost" href="../#work">All projects</a>
+    <a class="next" href="../macos-laps-2019/"><span>Next project</span>macOS LAPS UI →</a>
+  </div>
+</article></main>
+<footer class="foot"><div class="wrap"><span>© <span id="y"></span> Justin Reeves</span><span><a href="mailto:Justin_Reeves@me.com">Justin_Reeves@me.com</a></span></div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".mode-toggle");if(!b)return;function cur(){return r.getAttribute("data-mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-mode",n);try{localStorage.setItem("jr-mode",n)}catch(e){}var m=document.querySelectorAll('meta[name="theme-color"]');m.forEach(function(x){x.setAttribute("content",n==="dark"?"#0a0a0b":"#eef3f8");x.removeAttribute("media")})})})();</script>
+</body></html>

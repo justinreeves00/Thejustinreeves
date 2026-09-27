@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="theme-color" content="#eef3f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom FileMaker Deployment Case Study | Justin Reeves</title>
+<meta name="description" content="How Justin Reeves turned a school district FileMaker inventory into a scan-to-assign iPad deployment tool with the Jamf API.">
+<link rel="canonical" href="https://thejustinreeves.com/custom-filemaker-deployment-2018/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Justin Reeves">
+<meta property="og:url" content="https://thejustinreeves.com/custom-filemaker-deployment-2018/">
+<meta property="og:title" content="Custom FileMaker Deployment Case Study | Justin Reeves">
+<meta property="og:description" content="How Justin Reeves turned a school district FileMaker inventory into a scan-to-assign iPad deployment tool with the Jamf API.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thejustinreeves">
+<meta name="twitter:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<meta property="og:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<link rel="icon" href="../assets/sticker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>(function(){try{var m=localStorage.getItem("jr-mode");if(m)document.documentElement.setAttribute("data-mode",m)}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/style.css?v=9">
+</head><body>
+<header class="nav"><div class="wrap"><a class="home" href="../"><img src="../assets/sticker.png" alt="">Justin Reeves</a><div class="nav-right"><ul><li class="hide-sm"><a href="../#about">About</a></li><li><a href="../#work" aria-current="page">Projects</a></li><li><a href="../resume/">Resume</a></li><li><a href="../sticker/">Sticker Story</a></li></ul><button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div></div></header>
+<main class="wrap"><article class="cs">
+  <div class="cs-head">
+    <p class="meta">Clinton Public School District · 2018</p>
+    <h1>Custom FileMaker Deployment</h1>
+    <p class="lead">A district inventory database that grew into a one-scan tool for assigning, restricting, and resetting student iPads.</p>
+    <div class="chips"><span>FileMaker Pro</span><span>FileMaker Server</span><span>Bash + SSH</span><span>PowerSchool SIS</span><span>Jamf Pro API</span></div>
+  </div>
+  <p>Clinton Public Schools invested in FileMaker Pro in 2014 to track asset tags and serial numbers for our Mac and iOS devices. After a few years of building on it, it became much more than inventory.</p>
+  <figure><img src="../assets/projects/FileMaker-Details.png" alt="iPhone layout of the custom FileMaker app"><figcaption>The iPhone layout technicians used every day</figcaption></figure>
+  <p>I built workflows for assigning a device to a student or staff member, removing and re-adding restrictions, remotely wiping a device, clearing a passcode, and unassigning a device to return it to inventory.</p>
+
+  <h2>Assigning a student an iPad</h2>
+  <p>For the 2017–18 school year, we prepared every iOS device in Apple Configurator with a temporary user in Jamf and just enough configuration to get started: only Settings in the Dock and a wallpaper that said “Please connect to Wi-Fi.”</p>
+  <p>To assign a device, a technician picked the assign script, scanned the asset tag on the back of the iPad, then scanned the student’s schedule or ID number. That made an API call to Jamf to assign the student to the iPad. Once the student joined Wi-Fi, the iPad pulled down their configuration, their grade level’s apps, and the right restrictions.</p>
+
+  <h2>Removing and re-adding restrictions</h2>
+  <p>Technicians used this when they needed to change or check a setting that restrictions blocked. It came up often when students signed in to an Apple ID before restrictions applied, or when we needed to remove apps from the Home Screen without wiping the device. This was before MDM could remove apps directly.</p>
+
+  <h2>How it’s built</h2>
+  <ul style="margin:12px 0 0 20px">
+    <li>FileMaker Pro scripts</li>
+    <li>FileMaker Server scheduled scripts</li>
+    <li>Bash scripts over SSH to a remote server</li>
+    <li>CSV exports from PowerSchool SIS</li>
+    <li>Jamf Pro API</li>
+  </ul>
+  <div class="cs-next">
+    <a class="btn ghost" href="../#work">All projects</a>
+    <a class="next" href="../mdm-upgrade-2020/"><span>Next project</span>MDM Upgrade →</a>
+  </div>
+</article></main>
+<footer class="foot"><div class="wrap"><span>© <span id="y"></span> Justin Reeves</span><span><a href="mailto:Justin_Reeves@me.com">Justin_Reeves@me.com</a></span></div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".mode-toggle");if(!b)return;function cur(){return r.getAttribute("data-mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-mode",n);try{localStorage.setItem("jr-mode",n)}catch(e){}var m=document.querySelectorAll('meta[name="theme-color"]');m.forEach(function(x){x.setAttribute("content",n==="dark"?"#0a0a0b":"#eef3f8");x.removeAttribute("media")})})})();</script>
+</body></html>

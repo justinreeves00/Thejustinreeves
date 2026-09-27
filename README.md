@@ -1,20 +1,9 @@
-# Justin Reeves Resume
+# Justin Reeves Website
 
-The resume content lives in [`resume.json`](./resume.json).
+Static personal website for `thejustinreeves.com`.
 
-## Edit flow
+The current site source was imported from `~/Desktop/newsite/site`.
 
-1. Update the JSON fields you want to change.
-2. Run `npm run build`.
-3. Open `index.html` in the browser or use the generated `Justin_Reeves_Resume.pdf`.
+## Deployment
 
-## What gets generated
-
-- `index.html` from the official JSON Resume `kendall` theme.
-- `Justin_Reeves_Resume.pdf` as a print-ready PDF version.
-
-## Notes
-
-- Keep the JSON as the source of truth.
-- If you change experience, projects, skills, or summary text, rebuild so the HTML and PDF stay in sync.
-
+Pushes to `main` deploy to IONOS through GitHub Actions. See [`docs/IONOS_DEPLOYMENT.md`](docs/IONOS_DEPLOYMENT.md) for the required secrets and safety exclusions.

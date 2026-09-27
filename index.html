@@ -1,698 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resume of Justin Reeves</title>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
-    <style type="text/css">
-    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
-@charset "utf-8";
-@-webkit-viewport   { width: device-width; }
-@-moz-viewport      { width: device-width; }
-@-ms-viewport       { width: device-width; }
-@-o-viewport        { width: device-width; }
-@viewport           { width: device-width; }
-
-body{
-  font-family: 'Open Sans', Arial, Tahoma;
-  font-weight: 400;
-  color: #363636;
-  background: #334960;
-}
-blockquote {
-  font-size: 1em;
-}
-
-.container{
-  margin-top: 80px;
-  margin-bottom: 15px;
-  background: #fff;
-}
-
-#photo-header{
-  margin-top: -75px;
-}
-#photo{
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  padding: 5px;
-  background: #334960;
-  display: inline-block;
-}
-#photo img{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-#text-header h1{
-  margin: 0;
-  padding: 0;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-}
-#text-header h1::first-line{
-  font-size: 1.5em;
-  font-weight: 800;
-  line-height: 1.5em;
-}
-#text-header h1 span{
-  color: #334960;
-  opacity: 0.7;
-}
-#text-header h1 sup{
-  opacity: 0.5;
-}
-#text-header:after{
-  width: 100%;
-  height: 3px;
-  border-bottom: 1px solid #ddd;
-  margin-top: 15px;
-  content: '';
-  display: block;
-}
-
-.box{
-  padding-bottom: 10px;
-  margin-bottom: 25px;
-}
-.box h2{
-  color: #227c74;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-#awards,
-#education{
-  margin-top: 20px;
-  margin-bottom: 0;
-  position: relative;
-  padding: 1em 0;
-  list-style: none;
-}
-#awards:before,
-#education:before {
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  left: 35px;
-  top: 0;
-  content: ' ';
-  display: block;
-  background: #32475c;
-  background: -moz-linear-gradient(top,  #ffffff 0%, #32475c 7%, #32475c 89%, #ffffff 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#32475c), color-stop(89%,#32475c), color-stop(100%,#ffffff));
-  background: -webkit-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: -o-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: -ms-linear-gradient(top,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  background: linear-gradient(to bottom,  #ffffff 0%,#32475c 7%,#32475c 89%,#ffffff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
-}
-#awards li,
-#education li{
-  width: 100%;
-  z-index: 2;
-  position: relative;
-  float: left;
-}
-#awards .year,
-#education .year{
-  width: 14%;
-  background: #fff;
-  padding: 10px;
-  font-weight: 700;
-  display: inline-block;
-}
-#awards .description,
-#education .description{
-  width: 83%;
-  display: inline-block;
-  background: #eee;
-  margin-bottom: 10px;
-  position: relative;
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-#awards .description:after,
-#education .description:after {
-  content: '';
-  position: absolute;
-  top: 15px;
-  right: 0;
-  left: -16px;
-  height: 0;
-  width: 0;
-  border: solid transparent;
-  border-right-color: #eee;
-  border-width: 8px;
-  pointer-events: none;
-}
-#awards .description h3,
-#education .description h3{
-  font-size: 1.2em;
-  margin: 0;
-  padding: 0;
-  font-weight: 700;
-}
-#awards .description p,
-#education .description p{
-  margin-top: 5px;
-  padding: 0;
-}
-
-.job{
-  margin-bottom: 15px;
-}
-.job .details {
-  margin-left: 3%;
-  width: 95%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #eee;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
-}
-.job .where{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.job .year{
-  opacity: 0.7;
-}
-.job .profession{
-  font-size: 1.2em;
-  font-weight: bold;
-}
-.job .description{
-  line-height: 1.5em;
-}
-.job .highlights{
-  padding: 5px 0;
-  font-weight: bold;
-}
-.job .job-details {
-  padding-left: 5%;
-  width: 100%;
-}
-.publication {
-  margin-bottom: 0;
-}
-.publication .name{
-  font-size: 1em;
-  font-weight: bold;
-}
-.publication .year{
-    opacity: 0.7;
-}
-.publication p{
-  margin: 0;
-  padding-top: 10px;
-}
-
-.contact-item{
-  width: 100%;
-  float: left;
-}
-.contact-item .icon{
-  padding: 10px;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  color: #32475c;
-  background: #eee;
-}
-.contact-item:last-child .icon{
-  border-bottom: none;
-}
-.contact-item .title{
-  width: 80%;
-  width: calc(100% - 55px);
-  font-weight: 700;
-  opacity: 0.9;
-}
-.contact-item .title.only{
-  margin-top: 10px;
-}
-.contact-item .description{
-  width: 80%;
-  width: calc(100% - 55px);
-  color: #334960;
-}
-
-.item-interests,
-.item-skills{
-  height: 30px;
-  color: #334960;
-  padding: 5px 10px;
-  margin-bottom: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.1em;
-  font-weight: 600;
-}
-.interest,
-.skill{
-  color: #fff;
-  display: inline-block;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  padding: 5px 10px;
-  background: #32475c;
-  position: relative;
-  font-size: .85em;
-}
-.skill-level {
-  background-color: #227c74;
-  border-radius: 4px;
-  color: #fff;
-  padding: 1px 8px;
-  font-size: .75em;
-  position: absolute;
-  margin: 1px 10px;
-}
-
-#language-skills .skill{
-  margin: 10px 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-}
-
-    </style>
-    <style type="text/css" media="print">
-    body {
-  font-size: .95em;
-  -webkit-print-color-adjust: exact;
-}
-
-a[href]:after {
-  content: none !important;
-}
-
-#photo{
-  display: none;
-}
-
-.box {
-  margin-bottom: -10px;
-}
-
-blockquote,
-#education,
-#awards,
-.contact-item,
-.publication,
-.skills,
-.interests {
-  page-break-inside: avoid;
-}
-
-.col-sm-5{
-  width: 40%;
-  padding: 0 15px;
-}
-
-.col-sm-7{
-  width: 60%;
-  padding: 0 15px;
-}
-
-.skills .col-sm-offset-1,
-.interests .col-sm-offset-1{
-  margin-top: -10px;
-  margin-bottom: 5px;
-}
-
-#education {
-  margin: 0;
-  margin-bottom: -20px;
-}
-#awards:before,
-#education:before {
-  background: none;
-}
-
-#awards .description,
-#education .description,
-.job .details {
-  border: 1px solid #eee;
-}
-.publication,
-.publication .panel-heading,
-.publication .name{
-  margin: 0;
-  padding: 0 5px;
-  border: none;
-}
-.publication .panel-body {
-  padding: 0 10px;
-  margin: 0;
-}
-
-.badge {
-  margin: 0;
-}
-
-.list-group-item{
-  border: none;
-  margin: 0;
-  padding: 5px 15px;
-}
-.list-group-item:after{
-  content: '';
-  position: absolute;
-  top: 8px;
-  right: 0;
-  left: -1px;
-  height: 0;
-  width: 0;
-  border: solid transparent;
-  border-right-color: #999;
-  border-width: 4px;
-  pointer-events: none;
- }
-
-    </style>
-  
-    <style>
-      @media print {
-        .no-print { display: none !important; }
-      }
-      .codex-download {
-        position: fixed;
-        top: 16px;
-        right: 16px;
-        z-index: 9999;
-        font-family: Arial, sans-serif;
-      }
-      .codex-download a {
-        display: inline-block;
-        padding: 10px 14px;
-        border-radius: 999px;
-        background: #111827;
-        color: #fff !important;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 700;
-        box-shadow: 0 10px 24px rgba(17, 24, 39, 0.18);
-      }
-    </style>
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#eef3f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Justin Reeves | Deployment Systems Engineer</title>
+<meta name="description" content="Justin Reeves is a Deployment Systems Engineer at Apple in the Atlanta area. He helps schools and organizations deploy Apple devices at scale and builds AI tools and automation.">
+<link rel="canonical" href="https://thejustinreeves.com/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Justin Reeves">
+<meta property="og:url" content="https://thejustinreeves.com/">
+<meta property="og:title" content="Justin Reeves | Deployment Systems Engineer">
+<meta property="og:description" content="Justin Reeves is a Deployment Systems Engineer at Apple in the Atlanta area. He helps schools and organizations deploy Apple devices at scale and builds AI tools and automation.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thejustinreeves">
+<meta name="twitter:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Justin Reeves","url":"https://thejustinreeves.com/","image":"https://thejustinreeves.com/assets/headshot.jpg","jobTitle":"Deployment Systems Engineer","worksFor":{"@type":"Organization","name":"Apple"},"address":{"@type":"PostalAddress","addressLocality":"Atlanta","addressRegion":"GA","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Hinds Community College"},"knowsAbout":["Apple device deployment","Mobile device management","Jamf Pro","Microsoft Intune","Identity and SSO","Python","MCP servers","AI engineering"],"sameAs":["https://www.linkedin.com/in/justincreeves/","https://github.com/justinreeves00","https://www.twitter.com/thejustinreeves","https://www.instagram.com/justin_Reeves","https://www.facebook.com/jreeves","https://www.youtube.com/channel/UCdQS4U54JWJAbFJN7MZm_dA"]}</script>
+<meta property="og:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<link rel="icon" href="assets/sticker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<script>(function(){try{var m=localStorage.getItem("jr-mode");if(m)document.documentElement.setAttribute("data-mode",m)}catch(e){}})();</script>
+<link rel="stylesheet" href="assets/style.css?v=9">
 </head>
-  <body>
-    <div class="no-print codex-download">
-      <a href="Justin_Reeves_Resume.pdf" download>Download PDF</a>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div id="photo-header" class="text-center">
-            <!-- PHOTO (AVATAR) -->
-            <div id="photo">
-              <img src="&#x2F;&#x2F;www.gravatar.com&#x2F;avatar&#x2F;07bf61faaf49896c50e805c9fa1b4ce9?s&#x3D;200&amp;r&#x3D;pg&amp;d&#x3D;mm" alt="avatar">
-            </div>
-            <div id="text-header" >
-              <h1>Justin Reeves<br><span>Deployment systems engineer, automation builder, and customer-facing technical partner</span></h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-7">
-          <!-- ABOUT ME -->
-          <div class="box">
-            <h2><i class="fas fa-user ico"></i> About</h2>
-            <p>I operate at the intersection of customer needs and engineering, building systems that reduce friction, improve adoption, and translate real-world deployment challenges into practical workflows. I care about shipping useful tools, not just interesting ideas.</p>
-          </div>
-          <!-- WORK EXPERIENCE -->
-          <div class="box">
-            <h2><i class= "fas fa-suitcase ico"></i> Work Experience</h2>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Apple Inc.
-                    </div>
-                    <div class="year">January 2023 – Present</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">Deployment Systems Engineer</div>
-                    <div class="description">
-                      Centralized workflow platforms, AI-powered customer intelligence, and automation across teams.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Designed and built Cornerstone, a centralized workflow platform integrating Calendly, internal systems, and communication tools into a single system for managing customer engagements.</li>
-                        <li class="list-group-item">Leading development of an AI-powered customer intelligence system that aggregates engagement data, enables chat-based querying, and automates follow-ups using meeting transcripts.</li>
-                        <li class="list-group-item">Supported customers across K-12, higher education, and state/local government, guiding large-scale Apple deployments and best practices.</li>
-                        <li class="list-group-item">Built automation tools with Python, APIs, and Shortcuts that were adopted across multiple teams to reduce manual workflow overhead.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Apple Inc.
-                    </div>
-                    <div class="year">January 2020 – January 2023</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">K-12 Systems Engineer</div>
-                    <div class="description">
-                      Customer-facing technical support for school districts across Georgia.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Supported school districts across Georgia as a trusted technical advisor for Apple deployments.</li>
-                        <li class="list-group-item">Partnered with sales teams to remove technical blockers and support customer acquisition strategies.</li>
-                        <li class="list-group-item">Delivered technical workshops and deep dives on MDM, macOS deployment, and Apple School Manager.</li>
-                        <li class="list-group-item">Built automation tools to improve internal workflows and customer engagement processes.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Manhattan Associates
-                    </div>
-                    <div class="year">January 2020 – December 2020</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">Senior Systems Engineer</div>
-                    <div class="description">
-                      Systems and onboarding improvements for Apple environments.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Rebuilt the macOS enrollment experience using Octory, improving transparency and user experience during device setup.</li>
-                        <li class="list-group-item">Designed a zero-touch deployment workflow integrating Jamf, Okta, and onboarding tools.</li>
-                        <li class="list-group-item">Trained and mentored engineers on Apple device management and Jamf best practices.</li>
-                        <li class="list-group-item">Provided high-touch support for executives and critical systems.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Equifax (Tata Consultancy Services)
-                    </div>
-                    <div class="year">January 2019 – January 2020</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">Jamf &amp; Apple Systems Engineer</div>
-                    <div class="description">
-                      Enterprise deployment architecture and automation.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Built global Jamf Pro Cloud deployment architecture, migrating from on-prem infrastructure to a more scalable model.</li>
-                        <li class="list-group-item">Designed standardized enrollment workflows and configuration profiles for global device management.</li>
-                        <li class="list-group-item">Implemented Apple content caching strategy across regions to improve performance and reduce bandwidth usage.</li>
-                        <li class="list-group-item">Developed a Python-based macOS LAPS solution for secure admin credential management.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Clinton Public School District
-                    </div>
-                    <div class="year">January 2013 – January 2019</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">MDM Systems Administrator</div>
-                    <div class="description">
-                      End-to-end Apple device management and district operations.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Owned end-to-end Apple device management strategy for the district.</li>
-                        <li class="list-group-item">Built automation workflows using scripting and APIs to improve IT efficiency.</li>
-                        <li class="list-group-item">Developed internal tools and dashboards to support deployment and operations.</li>
-                        <li class="list-group-item">Managed vendor relationships, inventory, and lifecycle processes.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="job clearfix">
-                <div class="row">
-                  <div class="details">
-                    <div class="where">
-                      Apple Inc.
-                    </div>
-                    <div class="year">January 2010 – January 2013</div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="job-details col-xs-11">
-                    <div class="profession">Genius</div>
-                    <div class="description">
-                      Advanced troubleshooting and repair in the Apple product ecosystem.
-                      <div class="highlights">Highlights</div>
-                      <ul class="list-group">
-                        <li class="list-group-item">Delivered advanced troubleshooting and repair across the Apple product ecosystem.</li>
-                        <li class="list-group-item">Trained customers and internal team members on Apple technologies.</li>
-                        <li class="list-group-item">Recognized for leadership and technical expertise.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!-- PROJECTS -->
-          <div class="box">
-            <h2><i class= "fas fa-code-branch ico"></i> Projects</h2>
-            <ul class="list-group">
-              <li class="list-group-item">
-                <span style="font-weight:bold">AI Customer Engagement System</span>: Aggregates customer data, meeting transcripts, and engagement history, then helps teams automate follow-up work.
-              </li>
-              <li class="list-group-item">
-                <span style="font-weight:bold">macOS LAPS Tool</span>: Python-based tool for securely managing admin credentials in enterprise Apple environments.
-              </li>
-              <li class="list-group-item">
-                <span style="font-weight:bold">Home Assistant + AI Automations</span>: Smart home workflows that combine local systems with AI-driven triggers and integrations.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-5">
-          <!-- CONTACT -->
-          <div class="box clearfix">
-            <h2><i class="fas fa-bullseye ico"></i> Contact</h2>
-            <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fas fa-map-marker fa-fw"></span></div>
-              
-              <div class="title only  pull-right">Marietta, GA US</div>
-            </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fas fa-phone fa-fw"></span></div>
-              <div class="title only pull-right">601-955-4051</div>
-            </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fas fa-envelope fa-fw"></span></div>
-              <div class="title only pull-right"><a href="mailto:Justin_Reeves@me.com" target="_blank">Justin_Reeves@me.com</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fas fa-globe fa-fw"></span></div>
-              <div class="title only pull-right"><a href="https:&#x2F;&#x2F;thejustinreeves.com" target="_blank">https:&#x2F;&#x2F;thejustinreeves.com</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="icon pull-left text-center"><span class="fab fa-linkedin fa-fw"></span></div>
-              <div class="title pull-right">LinkedIn</div>
-              <div class="description pull-right"><a href="https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;justinreeves00&#x2F;" target="_blank">justinreeves00</a></div>
-            </div>
-          </div>
-          <!-- EDUCATION -->
-          <div class="box">
-            <h2><i class="fas fa-university ico"></i> Education</h2>
-            <ul id="education" class="clearfix">
-              <li>
-                <div class="year pull-left"> Present</div>
-                <div class="description pull-right">
-                  <h3>Hinds Community College</h3>
-                  <div class="where"></div>
-                  <p><i class= "fas fa-graduation-cap ico"></i> Associate of Applied Science</p>
-                  <p>Computer Networking Support Technologies</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <!-- SKILLS -->
-          <div class="box">
-            <h2><i class="fas fa-tasks ico"></i> Skills</h2>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                  Core
-                  
-              </div>
-              <div class="col-sm-offset-1 col-sm-12 clearfix">
-                <span class= "skill badge">Deployment and workflow automation</span>
-                <span class= "skill badge">Customer-facing engineering</span>
-                <span class= "skill badge">Systems integration</span>
-                <span class= "skill badge">Technical program execution</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                  Technical
-                  
-              </div>
-              <div class="col-sm-offset-1 col-sm-12 clearfix">
-                <span class= "skill badge">Jamf Pro</span>
-                <span class= "skill badge">Mosyle</span>
-                <span class= "skill badge">MDM frameworks</span>
-                <span class= "skill badge">Apple School Manager</span>
-                <span class= "skill badge">Apple Business Manager</span>
-                <span class= "skill badge">Python</span>
-                <span class= "skill badge">Bash</span>
-                <span class= "skill badge">REST APIs</span>
-                <span class= "skill badge">Okta</span>
-                <span class= "skill badge">Federation</span>
-                <span class= "skill badge">macOS security</span>
-              </div>
-            </div>
-            <div class="skills clearfix">
-              <div class="item-skills">
-                  Emerging
-                  
-              </div>
-              <div class="col-sm-offset-1 col-sm-12 clearfix">
-                <span class= "skill badge">AI-powered workflow automation</span>
-                <span class= "skill badge">Local LLM tooling and integrations</span>
-                <span class= "skill badge">Agent-oriented thinking</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
 
-  </body>
+<header class="nav"><div class="wrap">
+  <a class="home" href="./"><img src="assets/sticker.png" alt="">Justin Reeves</a>
+  <div class="nav-right"><ul>
+    <li class="hide-sm"><a href="#about">About</a></li>
+    <li><a href="#work">Projects</a></li>
+    <li><a href="resume/">Resume</a></li>
+    <li><a href="#sticker">Sticker Story</a></li>
+  </ul><button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div>
+</div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div>
+    <h1><span>Hi, I'm</span>Justin Reeves.</h1>
+    <p class="intro">I'm a <strong>Deployment Systems Engineer at Apple</strong>. I help schools and organizations roll out Apple devices at scale, then build tools that take the busywork out of it.</p>
+    <div class="cta">
+      <a class="btn" href="https://calendly.com/justin_reeves/meet" target="_blank" rel="noopener">Schedule a meeting</a>
+      <a class="btn ghost" href="mailto:Justin_Reeves@me.com">Email me</a>
+    </div>
+  </div>
+
+  <div class="mac-wrap">
+    <div class="mac">
+      <div class="mac-lid">
+        <img class="mac-face" src="assets/sticker.png" alt="Justin's Memoji face sticker">
+        <a class="brand" style="--bg:#0a66c2;--r:-12deg;--d:.15s;left:7cqw;top:6cqw" href="https://www.linkedin.com/in/justincreeves/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i><span class="tip">LinkedIn</span></a>
+        <a class="brand spotify" style="--bg:#191414;--fg:#1ed760;--r:9deg;--d:.25s;left:18cqw;top:27cqw" href="https://open.spotify.com/user/justin_reeves" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i><span class="tip">Spotify</span></a>
+        <a class="brand sq" style="--bg:#181717;--r:-7deg;--d:.35s;left:6cqw;top:49cqw" href="https://github.com/justinreeves00" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i><span class="tip">GitHub</span></a>
+        <a class="brand wide" style="--bg:#ff0000;--r:8deg;--d:.45s;left:76cqw;top:6cqw" href="https://www.youtube.com/channel/UCdQS4U54JWJAbFJN7MZm_dA" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i><span class="tip">YouTube</span></a>
+        <a class="brand sq ig" style="--r:-10deg;--d:.55s;left:81cqw;top:28cqw" href="https://www.instagram.com/justin_Reeves" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span class="tip">Instagram</span></a>
+        <a class="brand" style="--bg:#1877f2;--r:6deg;--d:.65s;left:71cqw;top:50cqw" href="https://www.facebook.com/jreeves" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i><span class="tip">Facebook</span></a>
+        <a class="brand" style="--bg:#000;--r:-5deg;--d:.75s;left:45cqw;top:53cqw" href="https://www.twitter.com/thejustinreeves" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i><span class="tip">X / Twitter</span></a>
+      </div>
+      <div class="mac-hinge"></div>
+      <div class="mac-base"></div>
+    </div>
+    <p class="mac-hint">Tap a sticker to find me online</p>
+  </div>
+</div></section>
+
+
+<section id="about" class="section band"><div class="wrap about-grid">
+  <div>
+    <p class="label">About</p>
+    <h2>Genius Bar to Apple Park.</h2>
+    <p class="big">I've spent my whole career around Apple devices, first fixing them, then managing thousands of them, and now helping schools deploy them.</p>
+    <p>The part I enjoy most is finding the repetitive work nobody likes and building something that makes it go away. Lately that means AI tools and automation my team uses every day.</p>
+    <p>I live in the Atlanta area with my wife and two daughters.</p>
+    <ol class="path">
+      <li><time>2010</time><span><b>Genius</b>, Apple Retail</span></li>
+      <li><time>2013</time><span><b>MDM Systems Administrator</b>, Clinton Public School District</span></li>
+      <li><time>2019</time><span><b>Jamf &amp; Apple Systems Engineer</b>, Equifax</span></li>
+      <li><time>2020</time><span><b>Senior Systems Engineer</b>, Manhattan Associates</span></li>
+      <li><time>2020</time><span><b>K-12 Systems Engineer</b>, Apple</span></li>
+      <li><time>2023</time><span><b>Deployment Systems Engineer</b>, Apple</span></li>
+    </ol>
+  </div>
+  <div class="photos photos-3">
+    <div class="photo wide headshot"><img src="assets/headshot.jpg" alt="Justin Reeves" loading="lazy"></div>
+    <figure class="photo tall tilt-r"><img src="assets/retail-2011.jpg" alt="Justin in his blue Apple Retail shirt in the store's back room" loading="lazy"><figcaption>2011<span>Genius Bar</span></figcaption></figure>
+    <figure class="photo tall tilt-l"><img src="assets/cupertino-2013.jpg" alt="Justin at the Infinite Loop sign on his first visit to Cupertino" loading="lazy"><figcaption>2013<span>1 Infinite Loop</span></figcaption></figure>
+    <figure class="photo tall tilt-r"><img src="assets/apple-park.jpg" alt="Justin at Apple Park" loading="lazy"><figcaption>2023<span>Apple Park</span></figcaption></figure>
+  </div>
+</div></section>
+<section class="section" id="sticker" style="border-top:0;padding-top:0"><div class="wrap">
+  <div class="story">
+    <div>
+      <p class="label">The sticker story</p>
+      <h2>What’s the deal with the face sticker?</h2>
+      <p>It started as a joke between coworkers and a 10¢ sticker. Years later it helped me get hired at Apple.</p>
+      <div class="cta"><a class="btn" href="sticker/">Read the story</a></div>
+    </div>
+    <div class="versions">
+      <figure><div class="v" role="img" aria-label="Version 1: photo of Justin's face"></div><figcaption>v1 · Photo</figcaption></figure>
+      <figure><div class="v" role="img" aria-label="Version 2: Memoji"></div><figcaption>v2 · Memoji</figcaption></figure>
+      <figure><div class="v" role="img" aria-label="Version 3: Memoji with QR code"></div><figcaption>v3 · QR code</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section id="work" class="section band"><div class="wrap">
+  <p class="label">Projects</p>
+  <h2>Things I've built.</h2>
+
+  <nav class="menu" aria-label="All projects">
+      <a class="tile" href="#p-extension"><span class="t-img" style="background-image:url(assets/projects/extension-ui.png);background-position:top"></span><span class="t-name">AI-powered browser extension</span><span class="t-org">Apple</span></a>
+      <a class="tile" href="#p-cornerstone"><span class="t-img" style="background-image:url(assets/projects/cornerstone-ui.png);background-position:top"></span><span class="t-name">Cornerstone</span><span class="t-org">Apple</span></a>
+      <a class="tile" href="#p-mcp"><span class="t-img t-icon"><i class="fa-solid fa-plug" aria-hidden="true"></i></span><span class="t-name">CRM MCP</span><span class="t-org">Apple</span></a>
+      <a class="tile" href="mdm-upgrade-2020/"><span class="t-img" style="background-image:url(assets/projects/Old_New_Enrollment-Process.png);background-position:center"></span><span class="t-name">MDM Upgrade</span><span class="t-org">Manhattan Associates</span></a>
+      <a class="tile" href="jamf-api-site-2019/"><span class="t-img" style="background-image:url(assets/projects/step-2.png);background-position:center"></span><span class="t-name">Jamf API Workspace</span><span class="t-org">Equifax</span></a>
+      <a class="tile" href="macos-laps-2019/"><span class="t-img" style="background-image:url(assets/projects/laps-ui.png);background-position:center"></span><span class="t-name">macOS LAPS UI</span><span class="t-org">Equifax</span></a>
+      <a class="tile" href="custom-filemaker-deployment-2018/"><span class="t-img" style="background-image:url(assets/projects/FileMaker-Details.png);background-position:center"></span><span class="t-name">Custom FileMaker Deployment</span><span class="t-org">Clinton Public Schools</span></a>
+      <a class="tile" href="#p-github"><span class="t-img t-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span><span class="t-name">Open source on GitHub</span><span class="t-org">Side projects</span></a>
+  </nav>
+
+  <div class="subhead"><h3>At Apple</h3><span class="meta">Internal tools · 2023 to now</span></div>
+  <div class="internal">
+    <article class="feature" id="p-extension">
+      <figure class="feature-shot"><img src="assets/projects/extension-ui.png" alt="The AI-powered browser extension showing a customer case summary, next meeting, tasks, and actions for email templates, scheduling links, meeting notes, updates, and AI chat. Details are blurred for privacy." loading="lazy"><figcaption>Blurred for privacy</figcaption></figure>
+      <div>
+        <p class="meta">Browser extension</p>
+        <h4>AI-powered browser extension</h4>
+        <dl>
+          <div><dt>The problem</dt><dd>Engineers were jumping between the CRM, email, calendars, and notes to prep for every customer call.</dd></div>
+          <div><dt>What I built</dt><dd>An internal browser extension that sits next to the customer record. It shows case health, the customer's setup, the next meeting, and open tasks, with one-click actions for email templates, scheduling links, meeting notes, and status updates.</dd></div>
+          <div><dt>Context-aware AI</dt><dd>The built-in AI assistant is grounded in each customer's full engagement history, our deployment process, and the engineer's role. Its answers and drafts reflect where that customer actually is, not generic advice.</dd></div>
+          <div><dt>Result</dt><dd>Used every day across the deployment team.</dd></div>
+        </dl>
+      </div>
+    </article>
+    <article class="feature feature-alt" id="p-cornerstone">
+      <figure class="feature-shot wide-shot"><img src="assets/projects/cornerstone-ui.png" alt="Cornerstone, a FileMaker Pro app showing a customer engagement header with engineer, identity provider, MDM, deployment status, and next meeting, above a task checklist. Details are blurred for privacy." loading="lazy"><figcaption>Blurred for privacy</figcaption></figure>
+      <div>
+        <p class="meta">FileMaker Pro platform</p>
+        <h4>Cornerstone</h4>
+        <dl>
+          <div><dt>The problem</dt><dd>Deployment Success engagements were spread across scheduling, internal systems, email, and notes, with no single view of where each customer stood.</dd></div>
+          <div><dt>What I built</dt><dd>A custom FileMaker Pro platform that connects Calendly, internal systems, and communication tools into a single pane of glass for managing customer engagements.</dd></div>
+          <div><dt>Result</dt><dd>One place to see and manage every customer interaction.</dd></div>
+        </dl>
+      </div>
+    </article>
+    <article id="p-mcp">
+      <p class="meta">MCP server</p>
+      <h4>CRM MCP</h4>
+      <dl>
+        <div><dt>The problem</dt><dd>AI assistants had no approved way to reach the CRM that engineers work from, so every question meant copying and pasting case details by hand.</dd></div>
+        <div><dt>What I built</dt><dd>A Model Context Protocol server with an engineered, secure connection to the CRM that wasn't possible before. AI assistants can look up cases, read history, and log notes with the user's own permissions.</dd></div>
+        <div><dt>Result</dt><dd>AI help grounded in real case data instead of copy and paste.</dd></div>
+      </dl>
+    </article>
+  </div>
+
+  <div class="subhead"><h3>Before Apple</h3><span class="meta">Case studies · 2018 to 2020</span></div>
+  <div class="cases">
+    <a class="case" href="mdm-upgrade-2020/">
+      <div class="thumb" style="background-image:url(assets/projects/Old_New_Enrollment-Process.png)"></div>
+      <div class="body">
+        <p class="meta">Manhattan Associates · 2020</p>
+        <h4>MDM Upgrade</h4>
+        <p>A full rebuild of the company's Mac management: zero-touch enrollment with Okta, one base policy per required app, a custom Octory first-login screen, and a branded Jamf Connect login with MFA.</p>
+        <span class="more">Read the case study →</span>
+      </div>
+    </a>
+    <a class="case" href="jamf-api-site-2019/">
+      <div class="thumb" style="background-image:url(assets/projects/step-2.png)"></div>
+      <div class="body">
+        <p class="meta">Equifax · 2019</p>
+        <h4>Jamf API Workspace</h4>
+        <p>A locked-down PHP web app that let technicians run approved Jamf Pro actions on a single computer without access to the full console. Every session ends automatically.</p>
+        <span class="more">Read the case study →</span>
+      </div>
+    </a>
+    <a class="case" href="macos-laps-2019/">
+      <div class="thumb" style="background-image:url(assets/projects/laps-ui.png);background-position:center"></div>
+      <div class="body">
+        <p class="meta">Equifax · 2019</p>
+        <h4>macOS LAPS UI</h4>
+        <p>A Python tool and Mac app that give every Mac its own rotating local admin password. Technicians look one up by computer name and can expire it on the spot.</p>
+        <span class="more">Read the case study →</span>
+      </div>
+    </a>
+    <a class="case" href="custom-filemaker-deployment-2018/">
+      <div class="thumb" style="background-image:url(assets/projects/FileMaker-Details.png)"></div>
+      <div class="body">
+        <p class="meta">Clinton Public Schools · 2018</p>
+        <h4>Custom FileMaker Deployment</h4>
+        <p>An inventory database that became a scan-to-assign tool. Scan an iPad and a student ID, and the Jamf API delivers that student's apps and restrictions.</p>
+        <span class="more">Read the case study →</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="subhead" id="p-github"><h3>On GitHub</h3><a class="meta" href="https://github.com/justinreeves00" target="_blank" rel="noopener" style="text-decoration:none">github.com/justinreeves00 →</a></div>
+  <div class="projects">
+    <div class="project"><h3>Intune device namer</h3><span class="kind">JavaScript</span>
+      <p>Pulls device info from a web page and renames devices through the Microsoft Intune API.</p>
+      <a href="https://github.com/justinreeves00/intune_namer" target="_blank" rel="noopener">View on GitHub →</a></div>
+    <div class="project"><h3>Jamf API scripts</h3><span class="kind">Shell</span>
+      <p>Scripts for automating common Jamf Pro tasks through its API.</p>
+      <a href="https://github.com/justinreeves00/jamf_api_scripts" target="_blank" rel="noopener">View on GitHub →</a></div>
+    <div class="project"><h3>SkateBag</h3><span class="kind">TypeScript</span>
+      <p>A web app for tracking skate tricks.</p>
+      <a href="https://github.com/justinreeves00/SkateBag" target="_blank" rel="noopener">View on GitHub →</a></div>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="foot"><div class="wrap">
+  <span>© <span id="y"></span> Justin Reeves</span>
+  <span><a href="mailto:Justin_Reeves@me.com">Justin_Reeves@me.com</a> · <a href="resume/">Resume</a></span>
+</div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".mode-toggle");if(!b)return;function cur(){return r.getAttribute("data-mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-mode",n);try{localStorage.setItem("jr-mode",n)}catch(e){}var m=document.querySelectorAll('meta[name="theme-color"]');m.forEach(function(x){x.setAttribute("content",n==="dark"?"#0a0a0b":"#eef3f8");x.removeAttribute("media")})})})();</script>
+</body>
 </html>

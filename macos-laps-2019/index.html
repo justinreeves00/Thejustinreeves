@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="theme-color" content="#eef3f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macOS LAPS UI Case Study | Justin Reeves</title>
+<meta name="description" content="A Python LAPS tool and Mac app by Justin Reeves that gives every Mac its own rotating local admin password.">
+<link rel="canonical" href="https://thejustinreeves.com/macos-laps-2019/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Justin Reeves">
+<meta property="og:url" content="https://thejustinreeves.com/macos-laps-2019/">
+<meta property="og:title" content="macOS LAPS UI Case Study | Justin Reeves">
+<meta property="og:description" content="A Python LAPS tool and Mac app by Justin Reeves that gives every Mac its own rotating local admin password.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@thejustinreeves">
+<meta name="twitter:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<meta property="og:image" content="https://thejustinreeves.com/assets/headshot.jpg">
+<link rel="icon" href="../assets/sticker.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<script>(function(){try{var m=localStorage.getItem("jr-mode");if(m)document.documentElement.setAttribute("data-mode",m)}catch(e){}})();</script>
+<link rel="stylesheet" href="../assets/style.css?v=9">
+</head><body>
+<header class="nav"><div class="wrap"><a class="home" href="../"><img src="../assets/sticker.png" alt="">Justin Reeves</a><div class="nav-right"><ul><li class="hide-sm"><a href="../#about">About</a></li><li><a href="../#work" aria-current="page">Projects</a></li><li><a href="../resume/">Resume</a></li><li><a href="../sticker/">Sticker Story</a></li></ul><button class="mode-toggle" type="button" aria-label="Switch between light and dark mode" title="Switch light / dark"><svg class="moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 14.5A9 9 0 0 1 9.5 3a7 7 0 1 0 11.5 11.5Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg></button></div></div></header>
+<main class="wrap"><article class="cs">
+  <div class="cs-head">
+    <p class="meta">Equifax · 2019</p>
+    <h1>macOS LAPS UI</h1>
+    <p class="lead">A Mac app that lets technicians look up and rotate local admin passwords without handing out a shared admin account.</p>
+    <div class="chips"><span>Python</span><span>macOS</span><span>Jamf Pro</span><span>Local admin security</span></div>
+  </div>
+
+  <h2>The problem</h2>
+  <p>Every Mac in the Jamf Pro-managed fleet needs a local admin account for support work. If that password is shared across machines, one leak exposes all of them. Each Mac needed its own password that changes on a schedule, and technicians needed a safe way to get it when they were at a desk helping someone.</p>
+
+  <h2>What I built</h2>
+  <p>I built a Python-based LAPS (Local Administrator Password Solution) for macOS, then gave it a simple app so technicians never had to touch a script. It works like this:</p>
+  <ol>
+    <li>The technician signs in with their own admin credentials.</li>
+    <li>They enter a computer name and select Search.</li>
+    <li>The app shows that Mac's current local admin password and when it expires.</li>
+    <li>If the password has been used or shared, they select Set to expire it now, so it rotates on the next check-in.</li>
+  </ol>
+  <figure><img src="../assets/projects/laps-ui.png" alt="The Mac OS LAPS UI window with fields for admin username, admin password, computer name, LAPS password, and expiration"><figcaption>The LAPS UI app</figcaption></figure>
+
+  <h2>Why it mattered</h2>
+  <p>Every Mac got a unique admin password that rotates on its own, and technicians could still get into any machine they were supporting. Passwords never had to be written down or sent around, and any password that was exposed could be rotated right away.</p>
+
+  <div class="cs-next">
+    <a class="btn ghost" href="../#work">All projects</a>
+    <a class="next" href="../custom-filemaker-deployment-2018/"><span>Next project</span>Custom FileMaker Deployment →</a>
+  </div>
+</article></main>
+<footer class="foot"><div class="wrap"><span>© <span id="y"></span> Justin Reeves</span><span><a href="mailto:Justin_Reeves@me.com">Justin_Reeves@me.com</a></span></div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<script>(function(){var r=document.documentElement,b=document.querySelector(".mode-toggle");if(!b)return;function cur(){return r.getAttribute("data-mode")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}b.addEventListener("click",function(){var n=cur()==="dark"?"light":"dark";r.setAttribute("data-mode",n);try{localStorage.setItem("jr-mode",n)}catch(e){}var m=document.querySelectorAll('meta[name="theme-color"]');m.forEach(function(x){x.setAttribute("content",n==="dark"?"#0a0a0b":"#eef3f8");x.removeAttribute("media")})})})();</script>
+</body></html>

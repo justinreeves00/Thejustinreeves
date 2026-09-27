@@ -1,0 +1,79 @@
+name: Deploy personal site to IONOS
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ionos-personal-site
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy over SFTP
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      IONOS_HOST: ${{ secrets.IONOS_SSH_HOST }}
+      IONOS_USER: ${{ secrets.IONOS_SSH_USER }}
+      IONOS_PORT: ${{ secrets.IONOS_SSH_PORT || '22' }}
+      IONOS_SITE_PATH: ${{ secrets.IONOS_SITE_PATH }}
+      IONOS_KNOWN_HOSTS: ${{ secrets.IONOS_KNOWN_HOSTS }}
+      IONOS_SSH_KEY: ${{ secrets.IONOS_SSH_KEY }}
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Validate deployment settings
+        run: |
+          set -euo pipefail
+          for name in IONOS_HOST IONOS_USER IONOS_PORT IONOS_SITE_PATH IONOS_KNOWN_HOSTS IONOS_SSH_KEY; do
+            [[ -n "${!name}" ]] || { echo "Missing required GitHub secret: $name" >&2; exit 1; }
+          done
+          [[ "$IONOS_PORT" =~ ^[0-9]+$ ]] || { echo "IONOS_SSH_PORT must be numeric." >&2; exit 1; }
+          [[ "$IONOS_SITE_PATH" == /* ]] || { echo "IONOS_SITE_PATH must be an absolute remote path." >&2; exit 1; }
+          [[ "$IONOS_SITE_PATH" != *"'"* ]] || { echo "IONOS_SITE_PATH cannot contain a single quote." >&2; exit 1; }
+
+      - name: Configure SSH
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          printf '%s\n' "$IONOS_SSH_KEY" > ~/.ssh/ionos_deploy_key
+          chmod 600 ~/.ssh/ionos_deploy_key
+          printf '%s\n' "$IONOS_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+
+      - name: Deploy site files
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+
+          lftp -e "\
+            set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/ionos_deploy_key -p $IONOS_PORT -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$HOME/.ssh/known_hosts'; \
+            mkdir -p '$IONOS_SITE_PATH'; \
+            mirror --reverse --delete --verbose \
+              --exclude-glob .git/ \
+              --exclude-glob .github/ \
+              --exclude-glob .gitignore \
+              --exclude-glob .DS_Store \
+              --exclude-glob README.md \
+              --exclude-glob docs/ \
+              --exclude-glob docs/** \
+              --exclude-glob scan/ \
+              --exclude-glob scan/** \
+              --exclude-glob up/ \
+              --exclude-glob up/** \
+              ./ '$IONOS_SITE_PATH'; \
+            bye" "sftp://$IONOS_USER@$IONOS_HOST"
+
+      - name: Verify public site
+        run: |
+          set -euo pipefail
+          curl -fsSI --retry 3 https://thejustinreeves.com/ >/dev/null
+          curl -fsSI --retry 3 https://thejustinreeves.com/resume/ >/dev/null
